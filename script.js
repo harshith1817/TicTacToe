@@ -9,11 +9,11 @@ let submit2=document.querySelector("#submit2");
 let msg=document.querySelector(".msg");
 let turn0=true;
 let count=0;
-let name1=null;
-let name2=null;
-let symbol1=null;
-let symbol2=null;
-
+let player = {};
+let name1 = null;
+let name2 = null;
+let symbol1 = null;
+let symbol2 = null;
 const WinningPatterns=[
     [0,1,2],
     [0,3,6],
@@ -35,10 +35,10 @@ const resetGame=()=>{
 boxes.forEach((box) => {
     box.addEventListener("click", () => {
         if(turn0){
-            box.innerText="0";
+            box.innerText=symbol1;
             turn0=false;
         } else{
-            box.innerText="X";
+            box.innerText=symbol2;
             turn0=true;
         }
         box.disabled=true;
@@ -70,7 +70,7 @@ const enableBoxes=()=>{
 }
 
 const showWinner=(Winner) =>{
-    msg.innerText=`Congratulations, Winner is ${Winner}`;
+    msg.innerText=`Congratulations, The Winner is ${player[Winner]}.`;
     WinnerContainer.classList.remove("hide");
     disableBoxes();
 };
@@ -100,10 +100,12 @@ next2.addEventListener("click", () => {
 
 submit1.addEventListener("click", () => { 
     symbol1 = document.querySelector("#input1").value;
+    player[symbol1] = name1;
 });
 
 submit2.addEventListener("click", () => {
     symbol2 = document.querySelector("#input2").value;
+    player[symbol2] = name2;
 });
 
 ResetButton.addEventListener("click",resetGame);

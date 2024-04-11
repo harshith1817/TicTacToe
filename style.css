@@ -35,7 +35,7 @@ body{
     background-color: #84a59d;
     box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem #a2a2a2;
     color: #0b3954;
-    font-size: 2rem;
+    font-size: 5rem;
 }
 
 .reset{
@@ -70,7 +70,7 @@ body{
     background-color: #f72585;
     border: none;
     border-radius: 1rem;
-    color: #cad2c5;
+    color: white;
 }
 
 .Submit{
@@ -152,9 +152,11 @@ body{
 .msg{
     color: green;
     font-weight: 1000;
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 .hide{
     display: none;
 }
+
+  
