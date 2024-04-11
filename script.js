@@ -2,8 +2,6 @@ let boxes=document.querySelectorAll(".box");
 let ResetButton=document.querySelector(".reset");
 let NewGameButton=document.querySelector(".newgame");
 let WinnerContainer=document.querySelector(".Winner-Container");
-let next1=document.querySelector("#next1");
-let next2=document.querySelector("#next2");
 let submit1=document.querySelector("#submit1");
 let submit2=document.querySelector("#submit2");
 let msg=document.querySelector(".msg");
@@ -90,20 +88,14 @@ const checkWinner = () =>{
     }
 };
 
-next1.addEventListener("click", () => { 
-    name1 = document.querySelector(".Player1name").value;
-});
-
-next2.addEventListener("click", () => {
-    name2 = document.querySelector(".Player2name").value;
-});
-
 submit1.addEventListener("click", () => { 
+    name1 = document.querySelector(".Player1name").value;
     symbol1 = document.querySelector("#input1").value;
     player[symbol1] = name1;
 });
 
 submit2.addEventListener("click", () => {
+    name2 = document.querySelector(".Player2name").value;
     symbol2 = document.querySelector("#input2").value;
     player[symbol2] = name2;
 });
