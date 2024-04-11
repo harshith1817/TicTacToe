@@ -14,7 +14,6 @@ body{
 
 .container{
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -34,6 +33,9 @@ body{
     border: none;
     border-radius: 0.5rem;
     background-color: #84a59d;
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem #a2a2a2;
+    color: #0b3954;
+    font-size: 2rem;
 }
 
 .reset{
@@ -43,4 +45,116 @@ body{
     background-color: #f28482;
     font-size: 1rem;
     border: none;
+    margin-top: 2rem;
+}
+
+#reset{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#playersdetails{
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.next{
+    height: 2rem;
+    width: 5rem;
+    background-color: #f72585;
+    border: none;
+    border-radius: 1rem;
+    color: #cad2c5;
+}
+
+.Submit{
+    height: 2rem;
+    width: 5rem;
+    background-color: #4cc9f0;
+    border: none;
+    border-radius: 1rem;
+}
+
+#input1{
+    height: 2rem;
+    width: 8rem;
+    border: none;
+    border-radius: 0.5rem;
+    text-align: center;
+    background-color: #b7b7a4;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#input2{
+    height: 2rem;
+    width: 8rem;
+    border: none;
+    border-radius: 0.5rem;
+    text-align: center;
+    background-color: #b7b7a4;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.Player1name{
+    height: 2rem;
+    width: 10rem;
+    border: none;
+    border-radius: 0.5rem;
+    text-align: center;
+    background-color: #b7b7a4;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.Player2name{
+    height: 2rem;
+    width: 10rem;
+    border: none;
+    border-radius: 0.5rem;
+    text-align: center;
+    background-color: #b7b7a4;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.Player1{
+    padding-right: 7rem;
+}
+
+.Player2{
+    padding-left: 7rem;
+}
+
+.Winner-Container{
+    font-size: 2rem;
+    padding-top: 7rem;
+    padding-bottom: 22rem;
+}
+
+.newgame{
+    height: 3rem;
+    width: 8rem;
+    border-radius: 1rem;
+    background-color: #f28482;
+    font-size: 1rem;
+    border: none;
+    margin-top: 2rem;
+}
+
+.msg{
+    color: green;
+    font-weight: 1000;
+    font-size: 5rem;
+}
+
+.hide{
+    display: none;
 }

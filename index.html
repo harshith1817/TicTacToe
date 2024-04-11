@@ -3,28 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe</title>
+    <title>Tic Tac Toe Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="script.js"></script>
     <h1>Tic Tac Toe</h1>
+    <div class="Winner-Container hide">
+        <p class="msg">Winner is </p>
+        <button class="newgame">New Game</button>
+    </div>
     <div class="container">
-        <div class="game">
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
+        <div class="Player1" id="playersdetails">
+            <p>Enter the name of Player1:</p>
+            <input type="text" class="Player1name" placeholder="Enter Your Name"></input>
+            <button class="next" id="next1">Next</button>
+            <p>Enter Your Symbol:</p>
+            <input type="text" id="input1" placeholder="Enter Your Symbol"></input>
+            <button class="Submit" id="submit1">Submit</button>
         </div>
-
-        <div>
-            <button class="reset">Reset Game</button>
+            <div class="game">
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+            </div>
+        <div class="Player2" id="playersdetails">
+            <p>Enter the name of Player2:</p>
+            <input type="text" class="Player2name"placeholder="Enter Your Name"></input>
+            <button class="next" id="next2">Next</button>
+            <p>Enter Your Symbol:</p>
+            <input type="text" id="input2" placeholder="Enter Your Symbol"></input>
+            <button class="Submit" id="submit2">Submit</button>
         </div>
     </div>
+    <div id="reset">
+        <button class="reset">Reset Game</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
