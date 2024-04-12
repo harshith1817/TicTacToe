@@ -7,6 +7,8 @@ let submit1=document.querySelector("#submit1");
 let submit2=document.querySelector("#submit2");
 let inputs=document.querySelectorAll('input');
 let msg=document.querySelector(".msg");
+let scoremsg1=document.querySelector(".scoremsg1");
+let scoremsg2=document.querySelector(".scoremsg2");
 let turn0=true;
 let count=0;
 let score1=0;
@@ -81,8 +83,8 @@ const enableBoxes=()=>{
 
 const showWinner=(Winner) =>{
     msg.innerText=`Congratulations, The Winner is ${player[Winner]}.`;
-    msg.innerText=`${name1}'s score is ${score1}.`;
-    msg.innerText=`${name2}'s score is ${score2}.`;
+    scoremsg1.innerText=`${name1}'s score is ${score1}.`;
+    scoremsg2.innerText=`${name2}'s score is ${score2}.`;
     WinnerContainer.classList.remove("hide");
     disableBoxes();
 };
