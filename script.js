@@ -1,12 +1,16 @@
 let boxes=document.querySelectorAll(".box");
 let ResetButton=document.querySelector(".reset");
+let HiddenResetButton=document.querySelector(".hiddenreset");
 let NewGameButton=document.querySelector(".newgame");
 let WinnerContainer=document.querySelector(".Winner-Container");
 let submit1=document.querySelector("#submit1");
 let submit2=document.querySelector("#submit2");
+let inputs=document.querySelectorAll('input');
 let msg=document.querySelector(".msg");
 let turn0=true;
 let count=0;
+let score1=0;
+let score2=0;
 let player = {};
 let name1 = null;
 let name2 = null;
@@ -24,6 +28,14 @@ const WinningPatterns=[
 ];
 
 const resetGame=()=>{
+    turn0=true;
+    count=0;
+    enableBoxes();
+    inputs.forEach(input => input.value='');
+    WinnerContainer.classList.add("hide");
+};
+
+const playAgain=()=>{
     turn0=true;
     count=0;
     enableBoxes();
@@ -58,17 +70,19 @@ const disableBoxes=()=>{
     for(let box of boxes){
         box.disabled=true;
     }
-}
+};
 
 const enableBoxes=()=>{
     for(let box of boxes){
         box.disabled=false;
         box.innerText="";
     }
-}
+};
 
 const showWinner=(Winner) =>{
     msg.innerText=`Congratulations, The Winner is ${player[Winner]}.`;
+    msg.innerText=`${name1}'s score is ${score1}.`;
+    msg.innerText=`${name2}'s score is ${score2}.`;
     WinnerContainer.classList.remove("hide");
     disableBoxes();
 };
@@ -100,5 +114,6 @@ submit2.addEventListener("click", () => {
     player[symbol2] = name2;
 });
 
+HiddenResetButton.addEventListener("click",resetGame);
 ResetButton.addEventListener("click",resetGame);
-NewGameButton.addEventListener("click",resetGame);
+NewGameButton.addEventListener("click",playAgain);
