@@ -68,6 +68,15 @@ const GameDraw=()=>{
     disableBoxes();
 };
 
+const scores=()=>{
+    if(player[Winner]==name1){
+        score1++;
+    } else if (player[Winner]==name2){
+        console.log("score2 increased")
+        score2++;
+    }
+};
+
 const disableBoxes=()=>{
     for(let box of boxes){
         box.disabled=true;
