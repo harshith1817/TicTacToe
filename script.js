@@ -32,6 +32,7 @@ const WinningPatterns=[
 const resetGame=()=>{
     turn0=true;
     count=0;
+    score1 = score2 = 0;
     enableBoxes();
     inputs.forEach(input => input.value='');
     WinnerContainer.classList.add("hide");
@@ -68,7 +69,7 @@ const GameDraw=()=>{
     disableBoxes();
 };
 
-const scores=()=>{
+const scores=(Winner)=>{
     if(player[Winner]==name1){
         score1++;
     } else if (player[Winner]==name2){
@@ -91,6 +92,7 @@ const enableBoxes=()=>{
 };
 
 const showWinner=(Winner) =>{
+    scores(Winner);
     msg.innerText=`Congratulations, The Winner is ${player[Winner]}.`;
     scoremsg1.innerText=`${name1}'s score is ${score1}.`;
     scoremsg2.innerText=`${name2}'s score is ${score2}.`;
