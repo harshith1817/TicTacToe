@@ -37,6 +37,7 @@ const resetGame=()=>{
     turn0=true;
     count=0;
     score1 = score2 = 0;
+    name1 = name2 = symbol1 = symbol2 = null;
     enableBoxes();
     inputs.forEach(input => input.value='');
     WinnerContainer.classList.add("hide");
@@ -134,16 +135,7 @@ submit2.addEventListener("click", () => {
 function addTask(){
     if(user1name.value==="" || user2name.value===" " || symbol1name.value===" " || symbol2name.value===" " || user1name.value==="" || user2name.value==="" || symbol1name.value==="" || symbol2name.value===""){
         alert("Enter Your Details to Continue");
-    }
-}
-
-function toggle(){
-    var x=document.getElementById("user1-name");
-    if(x.style.display==="none"){
-        x.style.display="block";
-    }
-    else{
-        x.style.display="none";
+        location.reload();
     }
 }
 
