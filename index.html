@@ -33,28 +33,32 @@
     <div class="container hidden">
         <div class="Player1" id="playersdetails">
             <p>Enter the name of Player1:</p>
-            <input type="text" class="Player1name" placeholder="Enter Your Name"></input>
+            <input type="text" class="Player1name" id="user1-name" placeholder="Enter Your Name"></input>
+            <p id="pname1"></p>
             <p>Enter Your Symbol:</p>
-            <input type="text" id="input1" placeholder="Enter Your Symbol"></input>
-            <button class="Submit" id="submit1">Submit</button>
+            <input type="text" id="input1" id="symbol1-name" placeholder="Enter Your Symbol"></input>
+            <p id="psymbol1"></p>
+            <button class="Submit" id="submit1" onclick="addTask()">Submit</button>
         </div>
             <div class="game">
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
+                <button class="box" onclick="addTask()"></button>
+                <button class="box" onclick="addTask()"></button>
+                <button class="box" onclick="addTask()"></button>
+                <button class="box" onclick="addTask()"></button>
+                <button class="box" onclick="addTask()"></button>
+                <button class="box" onclick="addTask()"></button>
+                <button class="box" onclick="addTask()"></button>
+                <button class="box" onclick="addTask()"></button>
+                <button class="box" onclick="addTask()"></button>
             </div>
         <div class="Player2" id="playersdetails">
             <p>Enter the name of Player2:</p>
-            <input type="text" class="Player2name"placeholder="Enter Your Name"></input>
+            <input type="text" class="Player2name" id="user2-name" placeholder="Enter Your Name"></input>
+            <p id="pname2"></p>
             <p>Enter Your Symbol:</p>
-            <input type="text" id="input2" placeholder="Enter Your Symbol"></input>
-            <button class="Submit" id="submit2">Submit</button>
+            <input type="text" id="input2" id="symbol2-name" placeholder="Enter Your Symbol"></input>
+            <p id="psymbol2"></p>
+            <button class="Submit" id="submit2" onclick="addTask()">Submit</button>
         </div>
     </div>
     <div id="reset">

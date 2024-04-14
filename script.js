@@ -6,6 +6,10 @@ let WinnerContainer=document.querySelector(".Winner-Container");
 let submit1=document.querySelector("#submit1");
 let submit2=document.querySelector("#submit2");
 let inputs=document.querySelectorAll('input');
+let user1name=document.getElementById('user1-name');
+let user2name=document.getElementById('user2-name');
+let symbol1name=document.getElementById('symbol1-name');
+let symbol2name=document.getElementById('symbol2-name');
 let msg=document.querySelector(".msg");
 let scoremsg1=document.querySelector(".scoremsg1");
 let scoremsg2=document.querySelector(".scoremsg2");
@@ -126,6 +130,22 @@ submit2.addEventListener("click", () => {
     symbol2 = document.querySelector("#input2").value;
     player[symbol2] = name2;
 });
+
+function addTask(){
+    if(user1name.value==="" || user2name.value===" " || symbol1name.value===" " || symbol2name.value===" " || user1name.value==="" || user2name.value==="" || symbol1name.value==="" || symbol2name.value===""){
+        alert("Enter Your Details to Continue");
+    }
+}
+
+function toggle(){
+    var x=document.getElementById("user1-name");
+    if(x.style.display==="none"){
+        x.style.display="block";
+    }
+    else{
+        x.style.display="none";
+    }
+}
 
 HiddenResetButton.addEventListener("click",resetGame);
 ResetButton.addEventListener("click",resetGame);
